@@ -1,0 +1,42 @@
+<div class="menu">
+
+  <!-- Menu icon -->
+  <div class="icon-close">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+  </div>
+
+  <!-- Menu -->
+  <ul>
+    <li><a href="messages">Messages</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+<div class="junbotron">
+  <div class="icon-menu">
+    <i class="fa fa-bars"></i>
+    Menu
+  </div>
+</div>
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="messages">
+  <div class="container">
+
+    <!-- Your code here -->
+    <% @messages.each do |message| %>
+      <div class="message">
+        <p class="content"><%= message.content %></p>
+        <p class="time"><%= message.created_at %></p>
+      </div>
+    <% end %>
+    <%= link_to 'New Message', "messages/new" %>
+    <%= link_to 'Back', "welcome" %>
+  </div>
+</div>
